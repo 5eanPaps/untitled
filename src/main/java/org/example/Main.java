@@ -3,12 +3,22 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.printf("Hello and welcome!");
+        Vehicle vehicle = new Vehicle();
+        Car car = new Car(4, "black", 6, "electricity", "honda");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        car.honk();
+        car.displayInfo();
+
+        car.setNumberOfWheels(18);
+        car.setColor("blue");
+        car.setEngineSize(8);
+        car.setFuelType("gas");
+
+        car.displayInfo();
+
+        System.out.println(car.getNumberOfWheels());
+        System.out.println(car.getColor());
+        System.out.println(car.getEngineSize());
+        System.out.println(car.getFuelType());
     }
 }
